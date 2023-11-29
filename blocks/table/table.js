@@ -2,20 +2,20 @@
 async function createTableHeader(table){
     let tr=document.createElement("tr");
     let sno=document.createElement("th");sno.appendChild(document.createTextNode("S.No"));
-    let conuntry=document.createElement("th");conuntry.appendChild(document.createTextNode("Countries"));
+    let conuntry=document.createElement("th");conuntry.appendChild(document.createTextNode("Country Name"));
     let continent=document.createElement("th");continent.appendChild(document.createTextNode("Continent"));
     let capital=document.createElement("th");capital.appendChild(document.createTextNode("Capital"));
-    let abbr=document.createElement("th");abbr.appendChild(document.createTextNode("Abbreviation"));
+    let abbr=document.createElement("th");abbr.appendChild(document.createTextNode("Currency"));
     tr.append(sno);tr.append(conuntry);tr.append(capital);tr.append(continent);tr.append(abbr);
     table.append(tr);
 }
 async function createTableRow(table,row,i){
     let tr=document.createElement("tr");
     let sno=document.createElement("td");sno.appendChild(document.createTextNode(i));
-    let conuntry=document.createElement("td");conuntry.appendChild(document.createTextNode(row.Country));
+    let conuntry=document.createElement("td");conuntry.appendChild(document.createTextNode(row.CountryName));
     let continent=document.createElement("td");continent.appendChild(document.createTextNode(row.Capital));
     let capital=document.createElement("td");capital.appendChild(document.createTextNode(row.Continent));
-    let abbr=document.createElement("td");abbr.appendChild(document.createTextNode(row.Abbreviation));
+    let abbr=document.createElement("td");abbr.appendChild(document.createTextNode(row.Currency));
     tr.append(sno);tr.append(conuntry);tr.append(continent);tr.append(capital);tr.append(abbr);
     table.append(tr);
 }
