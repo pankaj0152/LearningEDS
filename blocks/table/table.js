@@ -12,7 +12,7 @@ async function createTableHeader(table){
 async function createTableRow(table,row,i){
     let tr=document.createElement("tr");
     let sno=document.createElement("td");sno.appendChild(document.createTextNode(i));
-    let conuntry=document.createElement("td");conuntry.appendChild(document.createTextNode(row.CountryName));
+    let conuntry=document.createElement("td");conuntry.appendChild(document.createTextNode(row.Countryname));
     let continent=document.createElement("td");continent.appendChild(document.createTextNode(row.Capital));
     let capital=document.createElement("td");capital.appendChild(document.createTextNode(row.Continent));
     let abbr=document.createElement("td");abbr.appendChild(document.createTextNode(row.Currency));
